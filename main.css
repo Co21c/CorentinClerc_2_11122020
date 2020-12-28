@@ -30,7 +30,6 @@ main {
     justify-content: space-between;
 }
 
-
 .header_logo img {
     height: 100px;
     width: auto;
@@ -41,7 +40,6 @@ main {
     justify-content: center;
     align-items: center;
     padding: 20px;
-
 }
 
 .header_subscribe_link {
@@ -90,33 +88,50 @@ main {
 
 .header_search {
     display: flex;
+    border: solid 1px var(--background_grey);
+    width: fit-content;
+    margin: 0 0 20px 20px;
+    border-radius: 15px;
 }
 
 .label_search {
     margin: 0;
     padding: 0;
-
 }
 
 i.fas.fa-map-marker-alt {
     background-color: var(--background_grey);
     color: black;
-    margin: 0 0 0 20px;
     font-size: 16px;
     border-radius: 15px 0 0 15px;
+    margin: 0;
 }
 
 .input_search {
-    border: solid 1px var(--background_grey);
+    border: none;
     font-weight: 700;
     padding-left: 10px;
 }
 
-.btn_search {
+.input_search:focus {
+    outline: none;
+}
+
+.input_search::placeholder {
+    font-weight: 700;
+    color: black;
+    font-size: 1rem;
+}
+
+/* .btn_search {
     border: none;
     background-color: white;
     margin: 0;
     padding: 0;
+}
+
+.btn_search:focus {
+    outline: none;
 }
 
 i.fas.fa-search {
@@ -124,8 +139,31 @@ i.fas.fa-search {
     color: white;
     font-size: 18px;
     border-radius: 15px;
+    margin: 0;
+} */
 
+
+.btn_search {
+    border: none;
+    background-color: var(--primary);
+    overflow: hidden;
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+    color: transparent;
 }
+
+.btn_search::before {
+    font-family: "Font Awesome 5 Free";
+    content: '\f002';
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: white;
+    padding-left: 7px;
+}
+
+
+/* Les filtres */
 
 .filters_title {
     font-size: 1.6rem;
@@ -133,7 +171,7 @@ i.fas.fa-search {
     margin: 20px
 }
 
-.filters {
+.filters_btn {
     display: flex;
     flex-wrap: wrap;
 }
@@ -149,6 +187,15 @@ i.fas.fa-search {
     padding: 0 20px 0 0;
     align-items: center;
     justify-content: center;
+}
+
+.filters button:hover {
+    background-color: var(--primary_light);
+    border-color: var(--primary_light);
+}
+
+.filters button:focus {
+    outline: none;
 }
 
 /* changement de display des icones */
@@ -260,6 +307,9 @@ h1 {
     margin: 0;
 }
 
+
+/* Les hébergements */
+
 .accomodation_section {
     display: flex;
     justify-content: space-around;
@@ -350,8 +400,7 @@ h1 {
     opacity: 0.5;
 }
 
-
-
+/* Les acitivités */
 
 .activities_section {
     display: flex;
@@ -382,7 +431,6 @@ h1 {
 .activities_article:hover {
     opacity: 0.5;
 }
-
 
 .activities_img {
     height: 80%;
@@ -426,7 +474,7 @@ h1 {
 footer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-grow: 4;
     flex-shrink: 0;
     margin-top: 50px;
@@ -435,7 +483,7 @@ footer {
 
 footer div {
     padding: 20px;
-    min-width: 280px;
+    min-width: 250px;
     width: 30%;
 }
 
@@ -464,18 +512,15 @@ footer li a:hover {
 
 @media screen and (min-width: 850px) {
     
-
-
+    /* Reponsible du header */
 
     .header_function {
         flex-grow: 4;
     }
     
-
     .header_subscribe {
         height: 100px;
         order: 1;
-
     }
 
     .header_nav {
@@ -499,6 +544,28 @@ footer li a:hover {
         border-bottom: none;
     }
 
+    /* Reponsive bouton rechercher */
+
+    .btn_search {
+        color: white;
+        width: 150px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        padding: 0;
+    }
+
+    .btn_search::before {
+        content: '';
+        padding: 0;
+    }
+
+
+    .filters {
+        display: flex;
+    }
+
+    /* Responsive de la section activités avec Grid */
+
     .activities_section {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -510,7 +577,6 @@ footer li a:hover {
         "port frioul calanques longchamp";
     }
 
-    
     .activities_section h1 {
         grid-area: title;
     }
@@ -518,7 +584,6 @@ footer li a:hover {
     .port {
         grid-area: port;
         height: 100%;
-        
     }
 
     .pomegues {
@@ -543,17 +608,13 @@ footer li a:hover {
     .longchamp {
         grid-area: longchamp;
     }
-
-
-
 }
 
 
-    @media screen and (min-width: 1050px) {
+    @media screen and (min-width: 1024px) {
         
-
-
-
+    /* Responsive du main et des sections pour apparance bureau */
+        
     main {
         display: flex;
         flex-wrap: wrap;
@@ -561,21 +622,23 @@ footer li a:hover {
 
     .accomodation_section {
         order: 1;
-        width: calc(70% - 40px);
+        width: calc(70% - 30px);
         background-color: var(--background_grey);
-        margin: 20px;
+        margin-left: 20px;
         border-radius: 30px;
     }
 
     .accomodation_article {
-        width: calc(50% - 40px);
-        margin: 20px;
+        width: calc(33% - 20px);
+        margin: 10px;
+        max-width: 100%;
     }
 
     .famous_section {
         order: 2;
-        width: calc(30% - 40px);
-        margin: 20px;
+        width: calc(30% - 30px);
+        margin-right: 20px;
+        margin-left: 20px;
         border-radius: 30px;
 
     }
@@ -583,6 +646,7 @@ footer li a:hover {
     .activities_section {
         order: 3;
         width: 100%;
+        max-width: 85%;
     }
 
 }

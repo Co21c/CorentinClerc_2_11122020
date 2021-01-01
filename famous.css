@@ -1,0 +1,109 @@
+/* Les articles "les plus populaires" */
+
+.famous_section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: var(--background_grey);
+    padding: 30px 15px;
+    width: 100%;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 1.4rem;
+    width: 100%;
+    text-align: left;
+    margin-top: 0;
+}
+
+.famous_title_icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.famous_title_icon a {
+    transition: all 0.3s;
+}
+
+.famous_title_icon a:hover {
+    opacity: 0.5;
+}
+
+i.fas.fa-chart-line {
+    color: black;
+    background-color: transparent;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.famous_article {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: left;
+    background-color: white;
+    box-shadow: 0 0 1em rgb(224, 224, 224);
+    height: 160px;
+    width: 100%;
+    max-width: 600px;
+    padding: 5px;
+    margin: 10px 0;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s;
+    color: black;
+}
+
+.famous_article:hover {
+    opacity: 0.5;
+}
+
+.famous_img {
+    height: 100%;
+    width: 45%;
+    max-width: 45%;
+    border-radius: 30px 0 0 30px;
+}
+
+.le_soleil_du_matin {
+    background: no-repeat center center / cover url(images/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg);
+}
+
+.au_coeur_de_leau {
+    background: no-repeat center center / cover url(images/hebergements/3_medium/aw-creative-VGs8z60yT2c-unsplash.jpg);
+}
+
+.tout_bleu_et_blanc {
+    background: no-repeat center center / cover url(images/hebergements/3_medium/febrian-zakaria-sjvU0THccQA-unsplash.jpg);
+}
+
+.famous_name {
+    width: 55%;
+    font-size: 1rem;
+    padding: 10px 10px 0px 10px;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.famous_p {
+    width: 55%;
+    padding: 0px 10px 0px 10px;
+    font-size: 0.9rem;
+    margin: 0;
+    flex-grow: 1;
+}
+
+
+@media screen and (min-width: 1023px) {
+
+    .famous_section {
+        order: 2;
+        width: calc(30% - 30px);
+        margin-right: 20px;
+        margin-left: 20px;
+        border-radius: 30px;
+    }
+}

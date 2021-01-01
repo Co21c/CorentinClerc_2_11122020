@@ -1,0 +1,129 @@
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.header_logo img {
+    height: 55px;
+    width: auto;
+    margin: 10px;
+}
+
+.header_subscribe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.header_subscribe_link {
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--primary);
+    transition: all 0.3s;
+}
+
+.header_subscribe_link:hover {
+    color: var(--primary_light);
+}
+
+.header_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    width: 100%;
+}
+
+.header_nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
+    border-bottom: solid 3px var(--background_grey);
+    padding-bottom: 10px;
+    transition: 0.3s;
+}
+
+.header_nav a:hover {
+    border-bottom: solid 3px var(--primary);
+    color: var(--primary);
+}
+
+.header_main_title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    padding: 30px 10px 10px 10px;
+    margin: 0;
+}
+
+.header_main_p {
+    font-size: 1.150rem;
+    padding: 10px;
+    margin: 0 0 20px 0;
+}
+
+
+.header_info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    padding: 10px;
+}
+
+.info_p {
+    margin: 5px;
+}
+
+i.fas.fa-info-circle {
+    display: inline;
+    position: relative;
+    left: 0;
+    top: 0;
+    color: var(--primary);
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+
+@media screen and (min-width: 767px) {
+
+    /* Reponsible du header */
+
+    .header_function {
+        flex-grow: 4;
+    }
+        
+    .header_subscribe {
+        height: 100px;
+        order: 1;
+    }
+    
+    .header_nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: max-content;
+    }
+    
+    .header_nav a {
+        border-bottom: none;
+        border-top: solid 3px var(--background_grey);
+        transition: 0.3s;
+        height: 100px;
+        padding: 20px;
+    }
+    
+    .header_nav a:hover {
+        border-top: solid 3px var(--primary);
+        border-bottom: none;
+    }
+}

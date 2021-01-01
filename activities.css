@@ -1,0 +1,134 @@
+/* Les acitivités */
+
+.activities_section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 30px 15px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.activities_article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: 0 0 1em rgb(224, 224, 224);
+    height: 220px;
+    width: 100%;
+    max-width: 500px;
+    padding: 0;
+    margin: 15px 0;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s;
+    color: black;
+}
+
+.activities_article:hover {
+    opacity: 0.5;
+}
+
+.activities_img {
+    height: calc(100% - 50px);
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+}
+
+.activities_name {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.vieux_port {
+    background: no-repeat center center / cover url(images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
+}
+
+.fort_de_pomegues {
+    background: no-repeat center center / cover url(images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
+}
+
+.iles_du_frioul {
+    background: no-repeat center center / cover url(images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
+}
+
+.parc_national_des_calanques {
+    background: no-repeat center center / cover url(images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
+}
+
+.notre_dame_de_la_garde {
+    background: no-repeat center center / cover url(images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg);
+}
+
+.parc_longchamp {
+    background: no-repeat center center / cover url(images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
+}
+
+    @media screen and (min-width: 1023px) {
+
+    /* Responsive de la section activités avec Grid */
+
+    .activities_section {
+        order: 3;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, 88px) ;
+        gap: 30px;
+        padding: 0 35px;
+        grid-template-areas: 
+        "title title title title"
+        "port pomegues calanques garde"
+        "port pomegues calanques garde"
+        "port pomegues calanques longchamp"
+        "port frioul calanques longchamp"
+        "port frioul calanques longchamp";
+    }
+    
+    .activities_section h1 {
+        grid-area: title;
+        margin: 0;
+        display: flex;
+        align-items: flex-end;
+    }
+    
+    .port {
+        grid-area: port;
+        height: 100%;
+    }
+    
+    .pomegues {
+        grid-area: pomegues;
+        height: 100%;
+    }
+        
+    .frioul {
+        grid-area: frioul;
+        height: 100%;
+    }
+    
+    .calanques {
+        grid-area: calanques;
+        height: 100%;
+    }
+    
+    .garde {
+        grid-area: garde;
+        height: 100%;
+    }
+    
+    .longchamp {
+        grid-area: longchamp;
+        height: 100%;
+    }
+
+    .activities_article {
+        margin: 0;
+    }
+}

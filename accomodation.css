@@ -1,0 +1,125 @@
+/* Les hébergements */
+
+.accomodation_section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 30px 15px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.accomodation_article {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 0 0 1em rgb(224, 224, 224);
+    height: 220px;
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s;
+    color: black;
+    background-color: white;
+}
+
+.accomodation_article:hover {
+    opacity: 0.5;
+}
+
+.accomodation_img {
+    height: 60%;
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+}
+
+.auberge_la_cannebiere {
+    background: no-repeat center center / cover url(images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg);
+}
+
+.hotel_du_port {
+    background: no-repeat center center / cover url(images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg);
+}
+
+.hotel_des_mouettes {
+    background: no-repeat center center / cover url(images/hebergements/3_medium/reisetopia-B8WIgxA_PFU-unsplash.jpg);
+}
+
+.hotel_de_la_mer {
+    background: no-repeat center center / cover url(images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg);
+}
+
+.auberge_le_panier {
+    background: no-repeat center center / cover url(images/hebergements/3_medium/nicate-lee-kT-ZyaiwBe0-unsplash.jpg);
+}
+
+.auberge_chez_amina {
+    background: no-repeat center center / cover url(images/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg);
+
+}
+.accomodation_name {
+    width: 100%;
+    height: 10%;
+    font-size: 1rem;
+    padding: 10px;
+    margin: 0;
+    flex: 1;
+}
+
+.accomodation_p {
+    width: 100%;
+    height: 10%;
+    font-size: 0.9rem;
+    padding: 10px;
+    margin: 0;
+    flex: 1;
+}
+
+.accomodation_loadmore {
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s;
+    margin-top: 20px;
+    padding-left: 15px;
+    font-weight: 700;
+    width: 100%;
+}
+
+.accomodation_loadmore:hover {
+    opacity: 0.5;
+}
+
+@media screen and (min-width: 767px) {
+
+    .accomodation_title {
+        padding-left: 15px;
+    }
+
+    .accomodation_article {
+        max-width: 350px;
+    }
+}
+
+@media screen and (min-width: 1023px) {
+
+    .accomodation_section {
+        order: 1;
+        width: calc(70% - 30px);
+        background-color: var(--background_grey);
+        margin-left: 20px;
+        border-radius: 30px;
+    }
+
+    .accomodation_article {
+        width: calc(33% - 20px);
+        margin: 10px;
+        max-width: 100%;
+    }
+
+    .accomodation_name {
+        font-size: 0.9rem;
+    }
+}

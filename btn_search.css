@@ -1,0 +1,85 @@
+/* Boutton rechercher */
+
+.header_search {
+    display: flex;
+    border: solid 1px var(--background_grey);
+    width: fit-content;
+    margin: 0 0 20px 15px;
+    border-radius: 15px;
+}
+
+.label_search {
+    margin: 0;
+    padding: 0;
+}
+
+i.fas.fa-map-marker-alt {
+    background-color: var(--background_grey);
+    color: black;
+    font-size: 16px;
+    border-radius: 15px 0 0 15px;
+    margin: 0;
+}
+
+.input_search {
+    border: none;
+    font-weight: 700;
+    padding-left: 20px;
+    width: 240px;
+}
+
+.input_search:focus {
+    outline: none;
+}
+
+.input_search::placeholder {
+    font-weight: 700;
+    color: black;
+    font-size: 1rem;
+}
+
+.btn_search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--primary);
+    overflow: hidden;
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+    text-indent: -9999px;
+}
+
+.btn_search::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Font Awesome 5 Free";
+    content: '\f002';
+    text-indent: 1px;
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: white;
+}
+
+@media screen and (min-width: 767px) {
+    
+    /* Reponsive bouton rechercher */
+
+    .btn_search {
+        color: white;
+        width: 150px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        padding: 0;
+        border-radius: 0 15px 15px 0;
+        text-indent: 1px;
+    }
+
+    .btn_search::after {
+        content: '';
+        padding: 0;
+    }
+}

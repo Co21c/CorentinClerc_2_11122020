@@ -1,10 +1,10 @@
-@import url("header.css");
-@import url("btn_search.css");
-@import url("filters.css");
-@import url("famous.css");
-@import url("accomodation.css");
-@import url("activities.css");
-@import url("footer.css");
+@import url("css/header.css");
+@import url("css/btn_search.css");
+@import url("css/filters.css");
+@import url("css/famous.css");
+@import url("css/accomodation.css");
+@import url("css/activities.css");
+@import url("css/footer.css");
 
 :root {
     --primary: #0065FC;

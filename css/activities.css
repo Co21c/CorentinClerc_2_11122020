@@ -47,27 +47,27 @@
 }
 
 .vieux_port {
-    background: no-repeat center center / cover url(images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
+    background: no-repeat center center / cover url(img/3_medium-activites/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
 }
 
 .fort_de_pomegues {
-    background: no-repeat center center / cover url(images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
+    background: no-repeat center center / cover url(img/3_medium-activites/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
 }
 
 .iles_du_frioul {
-    background: no-repeat center center / cover url(images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
+    background: no-repeat center center / cover url(img/3_medium-activites/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
 }
 
 .parc_national_des_calanques {
-    background: no-repeat center center / cover url(images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
+    background: no-repeat center center / cover url(img/3_medium-activites/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
 }
 
 .notre_dame_de_la_garde {
-    background: no-repeat center center / cover url(images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg);
+    background: no-repeat center center / cover url(img/3_medium-activites/florian-wehde-xW9e8gdotxI-unsplash.jpg);
 }
 
 .parc_longchamp {
-    background: no-repeat center center / cover url(images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
+    background: no-repeat center center / cover url(img/3_medium-activites/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
 }
 
     @media screen and (min-width: 1023px) {
